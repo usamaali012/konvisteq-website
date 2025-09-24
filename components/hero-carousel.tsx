@@ -67,17 +67,21 @@ export function HeroCarousel() {
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white max-w-4xl px-4">
-          <div className="absolute bottom-2 left-2 bg-slate-900/0 rounded-2xl p-8 md:p-12">
-            <h1 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-balance">
-              Built on Trust since 2010
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-pretty opacity-90">{carouselImages[currentSlide].subtitle}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="glass text-lg px-8 py-4">
+
+          <div className="absolute bottom-50 left-50 bg-slate-900/0 rounded-2xl p-8 md:p-12">
+            <div className="flex flex-col text-left font-display font-semibold text-4xl md:text-6xl lg:text-7xl mb-6 leading-snug">
+              <div>Ready to take your</div>
+              <div className="text-[#64CCC5]">Business Growth </div>
+              <div>to the next level?</div>
+            </div>
+
+            {/* <p className="text-xl md:text-2xl mb-8 text-pretty opacity-90">{carouselImages[currentSlide].subtitle}</p> */}
+            <div className="absolute flex flex-row items-center justify-center group transition-all duration-300">
+              <Button className="bg-white text-black rounded-full flex items-center justify-between text-lg gap-5 px-4 py-5.5 border shadow-sm group-hover:border-white group-hover:text-white">
+                <span className="-ml-2 flex items-center justify-center w-8 h-8 rounded-full bg-black group-hover:bg-white text-white group-hover:text-black">
+                  <ChevronRight className="w-5 h-5" />
+                </span>
                 Get Started Today
-              </Button>
-              <Button size="lg" variant="outline" className="glass text-lg px-8 py-4 bg-transparent">
-                Learn More
               </Button>
             </div>
           </div>

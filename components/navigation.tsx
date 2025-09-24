@@ -1,15 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
+
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled,setScrolled]=useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20); //  after 20px scroll
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="w-full h-auto fixed top-0 left-0 right-0 z-50 px-4 py-4 bg-transparent hover:bg-[#001B1D]/95 group transition-all duration-500 ease-in-out">
+    <nav className={`w-full h-auto fixed top-0 left-0 right-0 z-50 px-4 py-4 hover:bg-[#001B1D]/95 group transition-all duration-500 ease-in-out ${scrolled ? "bg-[#001B1D]/95" : "bg-transparent"}`}>
       <div className="max-w-[90%] mx-auto flex items-center justify-between">
         <a href="/">
         <img src="/files/logo-w.svg" className="h-auto w-[180px]" alt="logo" />

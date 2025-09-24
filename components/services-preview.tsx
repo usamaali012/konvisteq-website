@@ -42,8 +42,8 @@ export function ServicesPreview() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 md:px-2">
+      <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 text-balance">Our Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -51,11 +51,11 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        <div className="flex gap-2 h-[400px]">
+        <div className="flex h-[300px] lg:h-[560px]">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-out rounded-lg ${
+              className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-out ${
                 hoveredIndex === index ? "flex-[1.3]" : "flex-1"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -64,14 +64,14 @@ export function ServicesPreview() {
               {/* Background Image */}
               <div
                 className={`absolute inset-0 bg-cover bg-center transition-all duration-700 ${
-                  hoveredIndex === index ? "grayscale-0 scale-110" : "grayscale scale-100"
+                  hoveredIndex === index ? "grayscale-0 scale-115" : "grayscale scale-100"
                 }`}
                 style={{ backgroundImage: `url(${service.image})` }}
               />
 
               <div
                 className={`absolute inset-0 transition-all duration-700 ${
-                  hoveredIndex === index ? "bg-black/30" : "bg-black/50"
+                  hoveredIndex === index ? "bg-[#0193A3]/10" : "bg-black/50"
                 }`}
               />
 
