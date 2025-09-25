@@ -10,9 +10,9 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-gray-900 text-white relative">
+    <footer className="bg-[#187C87] text-white relative">
       {/* Orange top border */}
-      <div className="h-1 bg-orange-500"></div>
+      <div className="h-1 bg-[#58595B]"></div>
 
       {/* Contact info section */}
       <div className="container mx-auto px-6 py-8">
@@ -59,12 +59,7 @@ export function Footer() {
           {/* Company branding */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-orange-500 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">A</span>
-              </div>
-              <span className="text-2xl font-bold text-orange-500">
-                Konvisteq
-              </span>
+              <img src="/files/logo-w.svg" alt="Logo-white" className="w-[%]" />
             </div>
 
             {/* Social media icons */}

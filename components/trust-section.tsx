@@ -75,10 +75,11 @@ export function TrustSection() {
           {coreValues.map((value, index) => (
             <div
               key={index}
-              className="group relative p-8 border border-border/20 hover:border-transparent transition-all duration-500 cursor-pointer running-border"
+              className="group relative p-8 border border-border/20 rounded-xl cursor-pointer running-border transition-all duration-300"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 border-2 border-transparent group-hover:animate-running-border"></div>
+              {/* Animated border layer */}
+              <div className="absolute inset-0 rounded-xl pointer-events-none">
+                <div className="border-anim opacity-0 group-hover:opacity-100"></div>
               </div>
 
               <div
@@ -100,34 +101,34 @@ export function TrustSection() {
       </div>
 
       <style jsx>{`
-        @keyframes running-border {
-          0% {
-            border-image: linear-gradient(90deg, #000 0%, transparent 50%, transparent 100%) 1;
-          }
-          25% {
-            border-image: linear-gradient(180deg, #000 0%, transparent 50%, transparent 100%) 1;
-          }
-          50% {
-            border-image: linear-gradient(270deg, #000 0%, transparent 50%, transparent 100%) 1;
-          }
-          75% {
-            border-image: linear-gradient(0deg, #000 0%, transparent 50%, transparent 100%) 1;
-          }
-          100% {
-            border-image: linear-gradient(90deg, #000 0%, transparent 50%, transparent 100%) 1;
-          }
-        }
-        
-        .running-border:hover::before {
-          content: '';
+        /* Animated border layer */
+        .border-anim {
           position: absolute;
           inset: 0;
           padding: 2px;
-          background: linear-gradient(90deg, #000, transparent, transparent, transparent);
           border-radius: inherit;
-          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          mask-composite: xor;
-          animation: running-border 2s linear infinite;
+          background: linear-gradient(
+            0deg,
+            black 0%,
+            transparent 30%,
+            transparent 70%,
+            black 100%
+          );
+          background-size: 400% 400%;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+          animation: borderRun 6s linear infinite;
+          transition: opacity 0.3s ease;
+        }
+
+        @keyframes borderRun {
+          0%   { background-position:   0%   0%; }
+          25%  { background-position: 100%   0%; }
+          50%  { background-position: 100% 100%; }
+          75%  { background-position:   0% 100%; }
+          100% { background-position:   0%   0%; }
         }
       `}</style>
     </section>

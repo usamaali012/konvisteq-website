@@ -40,16 +40,16 @@ export function AboutSection() {
           <div className="relative fade-in">
             {/* Main Image Container */}
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500">
+              <div className="rounded-3xl overflow-hidden transform transition-transform duration-500">
                 <img
                   src="/business-consultation-meeting-with-charts-and-fina.jpg"
                   alt="Business consultation meeting"
-                  className="w-full h-80 object-cover"
+                  className="w-full h-120 object-cover"
                 />
               </div>
 
               {/* Experience Badge */}
-              <div className="absolute -top-6 -left-6 bg-teal-500 text-white p-6 rounded-2xl shadow-xl z-10 duration-300">
+              <div className="absolute -top-6 -left-6 bg-teal-500 text-white p-6 rounded-2xl z-10 duration-300 border-8 border-gray-50">
                 <div className="flex items-center gap-3 mb-2">
                   <Briefcase className="w-6 h-6" />
                 </div>
@@ -58,7 +58,7 @@ export function AboutSection() {
               </div>
 
               {/* Secondary Image */}
-              <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-2xl overflow-hidden shadow-xl">
+              <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-3xl overflow-hidden border-[11px] border-white">
                 <img
                   src="/professional-financial-advisor-meeting-with-client.jpg"
                   alt="Professional consultation"
@@ -72,8 +72,7 @@ export function AboutSection() {
           <div className="space-y-8 fade-in">
             {/* Section Header */}
             <div className="flex items-center gap-2 text-teal-600">
-              <Sparkles className="w-5 h-5" />
-              <span className="text-4xl font-semibold uppercase tracking-wider">About us</span>
+              <span className="font-[Kanit] text-5xl font-extrabold uppercase tracking-wider">About us</span>
             </div>
 
             {/* Main Heading */}

@@ -4,6 +4,7 @@ import { ServicesPreview } from "@/components/services-preview"
 import { TrustSection } from "@/components/trust-section"
 import { Footer } from "@/components/footer"
 import {AboutSection} from "@/components/aboutsection"
+import {ShowcaseSection} from "@/components/showcasesec"
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Navigation />
       <HeroCarousel />
       <AboutSection />
+      <ShowcaseSection/>
       <ServicesPreview />
       <TrustSection />
       <Footer/>

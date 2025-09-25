@@ -13,7 +13,7 @@ const services = [
     features: ["Residential Construction", "Commercial Buildings", "Project Management", "Quality Assurance"],
   },
   {
-    title: "Architecture & Building",
+    title: "Architecture & Interior Design",
     image: "/elegant-modern-interior-design-living-room-with-lu.jpg",
     shortDescription: "Innovative architectural solutions",
     fullDescription:
@@ -21,7 +21,7 @@ const services = [
     features: ["Architectural Design", "Building Planning", "3D Visualization", "Permit Assistance"],
   },
   {
-    title: "House Renovation",
+    title: "Business Solutions",
     image: "/professional-financial-advisor-meeting-with-client.jpg",
     shortDescription: "Complete home transformations",
     fullDescription:
@@ -29,7 +29,7 @@ const services = [
     features: ["Kitchen Remodeling", "Bathroom Renovation", "Whole House Renovation", "Historic Restoration"],
   },
   {
-    title: "Interior Design",
+    title: "Financial Insights",
     image: "/business-consultation-meeting-with-charts-and-fina.jpg",
     shortDescription: "Beautiful interior spaces",
     fullDescription:
@@ -46,7 +46,7 @@ export function ServicesPreview() {
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 text-balance">Our Expertise</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty">
             Comprehensive solutions across construction, design, and financial services
           </p>
         </div>
@@ -55,7 +55,7 @@ export function ServicesPreview() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden cursor-pointer transition-all duration-700 ease-out ${
+              className={`relative overflow-hidden cursor-pointer transition-all duration-400 ease-out ${
                 hoveredIndex === index ? "flex-[1.3]" : "flex-1"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -63,8 +63,8 @@ export function ServicesPreview() {
             >
               {/* Background Image */}
               <div
-                className={`absolute inset-0 bg-cover bg-center transition-all duration-700 ${
-                  hoveredIndex === index ? "grayscale-0 scale-115" : "grayscale scale-100"
+                className={`absolute inset-0 bg-cover bg-center transition-all duration-400 ${
+                  hoveredIndex === index ? "grayscale-0 scale-110" : "grayscale scale-100"
                 }`}
                 style={{ backgroundImage: `url(${service.image})` }}
               />
@@ -76,23 +76,23 @@ export function ServicesPreview() {
               />
 
               {/* Content */}
-              <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                <div className="transition-all duration-500">
-                  <h3 className="font-display font-bold text-2xl mb-2">{service.title}</h3>
+              <div className="relative h-full flex flex-col justify-end p-6 text-white group">
+                <div className="transition-all duration-500 ease-in-out">
+                  <h3 className="font-display font-bold text-2xl mb-2 group-hover:text-3xl transition-all duration-500">{service.title}</h3>
 
                   <div
-                    className={`transition-all duration-500 overflow-hidden ${
-                      hoveredIndex === index ? "max-h-32 opacity-100" : "max-h-0 opacity-0"
+                    className={`transition-all ease-in-out duration-800 overflow-hidden ${
+                      hoveredIndex === index ? "max-h-36 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="text-white/90 mb-4 text-sm">{service.fullDescription}</p>
+                    <p className=" bg-black/70 rounded-2xl p-4 text-justify font-semibold text-white mb-4 text-sm">{service.fullDescription}</p>
                   </div>
 
                   {/* Always visible short description */}
                   <div
-                    className={`${hoveredIndex === index ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+                    className={`${hoveredIndex === index ? "opacity-0" : "opacity-100"} transition-opacity duration-50`}
                   >
-                    <p className="text-white/80 text-sm mb-4">{service.shortDescription}</p>
+                    <p className="text-white/95 text-sm mb-4">{service.shortDescription}</p>
                   </div>
                 </div>
 
@@ -103,7 +103,7 @@ export function ServicesPreview() {
                       hoveredIndex === index ? "bg-white/30 scale-110" : "bg-white/20"
                     }`}
                   >
-                    <ArrowUpRight className="w-4 h-4 text-white" />
+                    <ArrowUpRight className="w-4 h-4 text-white group-hover:h-5 group-hover:w-5 group-hover:rotate-45 transition-all duration-600 ease-in-out" />
                   </div>
                 </div>
               </div>
