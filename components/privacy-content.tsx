@@ -22,8 +22,7 @@ This policy describes how we collect, use, and safeguard information when you in
 • Transaction details, payment history, and investment records
 • Business project information shared during consultations
 • Device information and app usage analytics
-• Location data for property or real estate inquiries
-• Any documents you provide for compliance (e.g., KYC/AML requirements)`,
+• Location data for property or real estate inquiries`,
   },
   {
     title: "How We Use Your Information",
@@ -49,7 +48,6 @@ However, we may share it with:
     title: "Data Security",
     content: `We employ robust technical and organizational measures to keep your data safe:
 • End-to-end encryption of sensitive data
-• Secure payment gateways and PCI-DSS compliance
 • Multi-factor authentication for app logins
 • Regular vulnerability testing and security audits
 • Encrypted backups and disaster recovery procedures`,
@@ -97,7 +95,7 @@ Email: info@konvisteq.com
 Phone: +92 (51) 123-4567  
 
 Office Address:  
-Unit No.808, 8th Floor, Pakland Tower-2, New Blue Area (F-9/G-9), Islamabad, Pakistan`,
+Office No.808, 8th Floor, Pakland Tower-2, New Blue Area (F-9/G-9), Islamabad, Pakistan`,
   },
 ]
 export function PrivacyContent() {
@@ -117,12 +115,12 @@ export function PrivacyContent() {
             const isExpanded = expandedSections.includes(index)
 
             return (
-              <div key={index} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
+              <div key={index} className="border-2 border-gray-400 bg-white rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleSection(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-inset"
                 >
-                  <span className="text-lg font-medium text-gray-900">
+                  <span className="text-lg font-semibold text-gray-900">
                     {index + 1}. {section.title}
                   </span>
                   {isExpanded ? (
@@ -146,7 +144,7 @@ export function PrivacyContent() {
 
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-gray-500">
-          <p>Last updated: {new Date().toLocaleDateString()}</p>
+          <p>Last updated: 26-09-2025</p>
         </div>
       </div>
     </section>

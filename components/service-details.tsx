@@ -1,9 +1,50 @@
 "use client"
 
-import { Building, Palette, TrendingUp, Calculator, CheckCircle } from "lucide-react"
+import { Building, Palette, TrendingUp, Calculator, CheckCircle, Handshake } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 const services = [
+    {
+    icon: Handshake,
+    title: "B2B Solutions",
+    description: "Innovative strategies to accelerate business growth and streamline operations",
+    image: "/files/b2b.jpg",
+    features: [
+      "Business Process Optimization",
+      "Custom E-commerce Platforms",
+      "Market Expansion Strategies",
+      "Supply Chain & Operations Planning",
+      "Strategic Partnership Development",
+    ],
+  },
+    {
+    icon: Calculator,
+    title: "Financial Consultation",
+    description: "Comprehensive financial planning and consultation services",
+    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
+    features: [
+      "Financial Planning",
+      "Tax Strategy",
+      "Retirement Planning",
+      "Insurance Analysis",
+      "Estate Planning",
+      "Business Consulting",
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: "Investment Advisory",
+    description: "Strategic investment guidance for wealth building and preservation",
+    image: "/financialmeeting2.jpg",
+    features: [
+      "Portfolio Management",
+      "Risk Assessment",
+      "Market Analysis",
+      "Investment Strategy",
+      "Wealth Planning",
+      "Performance Monitoring",
+    ],
+  },
   {
     icon: Building,
     title: "Construction Services",
@@ -30,49 +71,7 @@ const services = [
       "Lighting Design",
       "Custom Solutions",
       "3D Visualization",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Investment Advisory",
-    description: "Strategic investment guidance for wealth building and preservation",
-    image: "/professional-financial-advisor-meeting-with-client.jpg",
-    features: [
-      "Portfolio Management",
-      "Risk Assessment",
-      "Market Analysis",
-      "Investment Strategy",
-      "Wealth Planning",
-      "Performance Monitoring",
-    ],
-  },
-  {
-    icon: Calculator,
-    title: "Financial Consultation",
-    description: "Comprehensive financial planning and consultation services",
-    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
-    features: [
-      "Financial Planning",
-      "Tax Strategy",
-      "Retirement Planning",
-      "Insurance Analysis",
-      "Estate Planning",
-      "Business Consulting",
-    ],
-  },
-  {
-    icon: Calculator,
-    title: "Financial Consultation",
-    description: "Comprehensive financial planning and consultation services",
-    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
-    features: [
-      "Financial Planning",
-      "Tax Strategy",
-      "Retirement Planning",
-      "Insurance Analysis",
-      "Estate Planning",
-      "Business Consulting",
-    ],
+    ],  
   },
 ]
 

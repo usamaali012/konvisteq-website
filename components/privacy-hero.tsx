@@ -8,7 +8,6 @@ export function PrivacyHero() {
         <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty">
           Your privacy is important to us. Learn how we collect, use, and protect your information.
         </p>
-        <p className="text-sm text-muted-foreground mt-4">Last updated: January 2024</p>
       </div>
     </section>
   )
