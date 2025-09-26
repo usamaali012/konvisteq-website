@@ -2,7 +2,7 @@
 
 export function ContactInfo() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 mt-36">
       <div>
         <h3 className="font-display font-bold text-2xl mb-4">Office Locations</h3>
         <p className="text-gray-600 mb-6">
@@ -11,16 +11,16 @@ export function ContactInfo() {
 
         <div className="mb-6">
           <img
-            src="/elegant-modern-interior-design-living-room-with-lu.jpg"
+            src="/buildingloc.jpg"
             alt="Office interior"
-            className="w-full h-48 object-cover rounded-lg"
+            className="w-full h-72 object-cover rounded-lg"
           />
         </div>
 
         <div className="space-y-3">
-          <p className="text-gray-800 font-medium">2972 Westheimer Rd., Illinois 85486</p>
-          <p className="text-orange-500 font-bold text-xl">(084) 123 - 456 88</p>
-          <p className="text-gray-600">support@example.com</p>
+          <p className="text-gray-800text-2xl font-bold">Office# 808, 8th floor, Pakland Tower-2, New Blue Area (F-9/G-9) Islamabad</p>
+          <p className="text-[#02adc0d8] font-bold text-xl">(050) 123 - 456 78</p>
+          <p className="text-gray-600 text-xl text-semibold">info@konvisteq.com</p>
         </div>
       </div>
     </div>

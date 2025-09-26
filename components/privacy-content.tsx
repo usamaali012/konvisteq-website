@@ -1,141 +1,153 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
 const privacySections = [
   {
-    title: "Information We Collect",
-    content: [
-      "Personal Information: We collect information you provide directly to us, such as when you create an account, request our services, or contact us. This may include your name, email address, phone number, address, and other contact information.",
-      "Service Information: When you use our construction, interior design, investment advisory, or financial consultation services, we may collect information related to your projects, preferences, and service requirements.",
-      "Communication Records: We maintain records of our communications with you, including emails, phone calls, and meeting notes, to provide better service and maintain project continuity.",
-      "Technical Information: We automatically collect certain information when you visit our website, including your IP address, browser type, operating system, and usage patterns.",
-    ],
+    title: "Introduction",
+    content: `Konvisteq respects your privacy and is committed to protecting your personal data. 
+This policy describes how we collect, use, and safeguard information when you interact with our services, including:
+• B2B consultation and technology solutions
+• E-commerce platforms and online store setups
+• Financial management web, Android, and iOS applications
+• Investment and financial advisory opportunities
+• Real estate development and property projects`,
+  },
+  {
+    title: "Personal Data We Collect",
+    content: `Depending on the services you use, we may collect:
+• Basic contact details (name, email, phone, business information)
+• Account credentials and authentication data
+• Transaction details, payment history, and investment records
+• Business project information shared during consultations
+• Device information and app usage analytics
+• Location data for property or real estate inquiries
+• Any documents you provide for compliance (e.g., KYC/AML requirements)`,
   },
   {
     title: "How We Use Your Information",
-    content: [
-      "Service Delivery: We use your information to provide, maintain, and improve our construction, interior design, investment advisory, and financial consultation services.",
-      "Communication: We use your contact information to communicate with you about your projects, appointments, service updates, and respond to your inquiries.",
-      "Business Operations: We may use your information for internal business purposes, including project management, quality assurance, and service improvement.",
-      "Legal Compliance: We may use your information to comply with applicable laws, regulations, and legal processes.",
-    ],
+    content: `Your data helps us deliver and improve our services:
+• Provide B2B solutions and manage client projects
+• Develop, host, and maintain e-commerce platforms
+• Operate and secure our financial management apps
+• Process transactions and investment opportunities
+• Send updates, invoices, and service-related communications
+• Personalize user experience and recommend relevant services
+• Meet legal, tax, and regulatory obligations`,
   },
   {
-    title: "Information Sharing and Disclosure",
-    content: [
-      "Service Providers: We may share your information with trusted third-party service providers who assist us in delivering our services, such as contractors, suppliers, and professional consultants.",
-      "Legal Requirements: We may disclose your information if required by law, regulation, legal process, or governmental request.",
-      "Business Transfers: In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.",
-      "Consent: We may share your information with your explicit consent or at your direction.",
-    ],
+    title: "Information Sharing",
+    content: `We do not sell your personal information. 
+However, we may share it with:
+• Trusted service providers (cloud hosting, payment processors, analytics) under strict confidentiality agreements
+• Financial institutions or regulators when required by law
+• Partners involved in property transactions or joint projects
+• Third parties only with your explicit consent or when legally required`,
   },
   {
     title: "Data Security",
-    content: [
-      "Protection Measures: We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-      "Access Controls: We limit access to your personal information to employees and contractors who need it to perform their job functions.",
-      "Regular Reviews: We regularly review and update our security practices to ensure the ongoing protection of your information.",
-      "Incident Response: In the event of a data breach, we will notify affected individuals and relevant authorities as required by applicable law.",
-    ],
+    content: `We employ robust technical and organizational measures to keep your data safe:
+• End-to-end encryption of sensitive data
+• Secure payment gateways and PCI-DSS compliance
+• Multi-factor authentication for app logins
+• Regular vulnerability testing and security audits
+• Encrypted backups and disaster recovery procedures`,
   },
   {
-    title: "Your Rights and Choices",
-    content: [
-      "Access and Correction: You have the right to access and correct your personal information. Contact us to request access to or correction of your information.",
-      "Data Portability: You may request a copy of your personal information in a structured, commonly used format.",
-      "Deletion: You may request deletion of your personal information, subject to certain legal and business requirements.",
-      "Marketing Communications: You can opt out of receiving marketing communications from us by following the unsubscribe instructions in our emails or contacting us directly.",
-    ],
+    title: "Mobile App Privacy",
+    content: `Our Android and iOS financial management apps may collect:
+• Device identifiers and performance metrics
+• User activity to enhance app functionality
+• Push notification preferences
+No banking credentials or card details are stored on our servers.`,
   },
   {
-    title: "Cookies and Tracking Technologies",
-    content: [
-      "Cookie Usage: Our website uses cookies and similar tracking technologies to enhance your browsing experience and analyze website usage.",
-      "Types of Cookies: We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device for a specified period).",
-      "Cookie Control: You can control cookie settings through your browser preferences, though disabling cookies may affect website functionality.",
-      "Analytics: We use analytics tools to understand how visitors interact with our website and improve our services.",
-    ],
+    title: "Retention & Deletion",
+    content: `We retain personal data only as long as necessary:
+• Financial and transaction records are kept for regulatory compliance
+• Business and project data is retained during active engagements
+• Marketing preferences remain until you opt out
+• You may request account deletion or data removal at any time, subject to legal obligations`,
   },
   {
-    title: "Children's Privacy",
-    content: [
-      "Age Restrictions: Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18.",
-      "Parental Notice: If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly.",
-      "Parental Rights: Parents or guardians who believe their child has provided personal information to us may contact us to request deletion of such information.",
-    ],
+    title: "Your Rights",
+    content: `You have the right to:
+• Access and receive a copy of your personal data
+• Correct or update inaccurate information
+• Request deletion of your data (where legally allowed)
+• Restrict or object to processing for marketing
+• Withdraw consent at any time
+To exercise these rights, contact us at info@konvisteq.com`,
   },
   {
     title: "International Data Transfers",
-    content: [
-      "Cross-Border Transfers: Your information may be transferred to and processed in countries other than your country of residence, which may have different data protection laws.",
-      "Safeguards: When we transfer your information internationally, we implement appropriate safeguards to protect your information in accordance with applicable law.",
-      "Legal Basis: We ensure that international transfers are conducted in compliance with applicable data protection regulations.",
-    ],
+    content: `If you access our services from outside Pakistan, your data may be processed in countries that may not offer the same data protection laws. We take steps to ensure adequate safeguards for cross-border transfers.`,
   },
   {
-    title: "Changes to This Privacy Policy",
-    content: [
-      "Policy Updates: We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law.",
-      "Notification: We will notify you of material changes to this Privacy Policy by posting the updated policy on our website and updating the 'Last Updated' date.",
-      "Continued Use: Your continued use of our services after any changes to this Privacy Policy constitutes your acceptance of the updated policy.",
-    ],
+    title: "Changes to This Policy",
+    content: `We may update this policy to reflect changes in our services or legal requirements. 
+Significant updates will be posted on our website and, where appropriate, notified via email or in-app alerts.`,
   },
   {
-    title: "Contact Information",
-    content: [
-      "Questions and Concerns: If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:",
-      "Email: privacy@avencio.com",
-      "Phone: +1 (555) 123-4567",
-      "Address: 123 Business District, Downtown City, State 12345, United States",
-      "Response Time: We will respond to your privacy-related inquiries within 30 days of receipt.",
-    ],
+    title: "Contact Us",
+    content: `If you have any questions or concerns regarding this Privacy Policy, please contact:
+
+Email: info@konvisteq.com  
+Phone: +92 (51) 123-4567  
+
+Office Address:  
+Unit No.808, 8th Floor, Pakland Tower-2, New Blue Area (F-9/G-9), Islamabad, Pakistan`,
   },
 ]
-
 export function PrivacyContent() {
+  const [expandedSections, setExpandedSections] = useState<number[]>([])
+
+  const toggleSection = (index: number) => {
+    setExpandedSections((prev) => (prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]))
+  }
+
   return (
-    <section className="py-20 px-4">
+    <section className="py-16 px-4 bg-gray-50 min-h-screen">
       <div className="max-w-4xl mx-auto">
-        <div className="space-y-8">
-          {privacySections.map((section, index) => (
-            <Card key={index} className="glass border-0">
-              <CardContent className="p-8">
-                <h2 className="font-display font-bold text-2xl md:text-3xl mb-6">{section.title}</h2>
-                <div className="space-y-4">
-                  {section.content.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex} className="text-muted-foreground leading-relaxed text-pretty">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        
+        {/* Accordion Sections */}
+        <div className="space-y-2">
+          {privacySections.map((section, index) => {
+            const isExpanded = expandedSections.includes(index)
+
+            return (
+              <div key={index} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
+                <button
+                  onClick={() => toggleSection(index)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-inset"
+                >
+                  <span className="text-lg font-medium text-gray-900">
+                    {index + 1}. {section.title}
+                  </span>
+                  {isExpanded ? (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                  )}
+                </button>
+
+                {isExpanded && (
+                  <div className="px-6 pb-6 border-t border-gray-100">
+                    <div className="pt-4">
+                      <div className="text-gray-700 leading-relaxed whitespace-pre-line">{section.content}</div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
 
-        <Card className="glass border-0 mt-12">
-          <CardContent className="p-8 text-center">
-            <h3 className="font-display font-bold text-xl mb-4">Need More Information?</h3>
-            <p className="text-muted-foreground mb-6">
-              If you have any questions about our privacy practices or this policy, we're here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:privacy@avencio.com"
-                className="inline-flex items-center justify-center px-6 py-3 glass rounded-lg hover:bg-primary/10 transition-colors"
-              >
-                Email Us
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 glass rounded-lg hover:bg-primary/10 transition-colors"
-              >
-                Contact Form
-              </a>
-            </div>
-          </CardContent>
-        </Card>
+        {/* Footer */}
+        <div className="mt-12 text-center text-sm text-gray-500">
+          <p>Last updated: {new Date().toLocaleDateString()}</p>
+        </div>
       </div>
     </section>
   )

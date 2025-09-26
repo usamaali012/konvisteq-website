@@ -36,30 +36,29 @@ export function ShowcaseSection() {
             }`}
           >
             <div className="space-y-4">
-              <p className="text-[#0193A3] font-medium text-sm uppercase tracking-wider">who we are.</p>
               <h2 className="font-[Kanit] text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 LEADING NATIONAL
                 <br />
-                DEVELOPERS AND
+                BUILDERS AND
                 <br />
                 ADVISORS
               </h2>
             </div>
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p className="text-xl">
+              <p className="text-xl text-left">
                 As a national leader in our industry, we are revolutionizing what you expect from a contractor.
               </p>
-              <p className="text-lg">
+              <p className="text-lg lg:text-xl text-left">
                 Our clients cover a wide range of sectors including local, state, territory and
                 government contracts, retail and sales, hospitality, commercial, health and aged care, industrial and
-                manufacturing, civil works and defence, as well as medium-density residential, in the Capitol City.
+                manufacturing, civil works and defence, as well as medium-density residential, in the Capital City.
               </p>
             </div>
 
-            <Button className="bg-black hover:bg-gray-800 text-white text-lg py-5 rounded-full group transition-all duration-300">
-              More About Us
-              <ArrowRight className="ml-3 !h-5 !w-7 group-hover:translate-x-1 transition-transform" />
+            <Button className="bg-black hover:bg-gray-800 text-white text-lg py-6 rounded-full group transition-all duration-300">
+              <span className="ml-3 text-xl">More About Us</span>
+              <ArrowRight className="mx-4 !h-6 !w-7 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 

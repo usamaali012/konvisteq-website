@@ -42,9 +42,9 @@ export function AboutSection() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden transform transition-transform duration-500">
                 <img
-                  src="/business-consultation-meeting-with-charts-and-fina.jpg"
+                  src="/financialmeeting1.jpeg"
                   alt="Business consultation meeting"
-                  className="w-full h-120 object-cover"
+                  className="w-full h-120 object-cover opacity-90"
                 />
               </div>
 
@@ -62,7 +62,7 @@ export function AboutSection() {
                 <img
                   src="/professional-financial-advisor-meeting-with-client.jpg"
                   alt="Professional consultation"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-85"
                 />
               </div>
             </div>
@@ -88,7 +88,7 @@ export function AboutSection() {
             </p>
 
             {/* Statistics */}
-            <div className="grid grid-cols-2 gap-8 pt-8">
+            <div className="grid grid-cols-2 gap-8 pt-8 justify-items-center">
               <div className="text-center lg:text-left">
                 <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">
                   130 <span className="text-3xl">+</span>

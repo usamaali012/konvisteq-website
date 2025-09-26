@@ -20,7 +20,7 @@ export function Navigation() {
   }, []);
 
   return (
-    <nav className={`w-full h-auto fixed top-0 left-0 right-0 z-50 px-4 py-4 hover:bg-[#001B1D]/95 group transition-all duration-500 ease-in-out ${scrolled ? "bg-[#001B1D]/95" : "bg-transparent"}`}>
+    <nav className={`w-full h-auto fixed top-0 left-0 right-0 z-50 px-4 py-4 hover:bg-[#001B1D]/95 group transition-all duration-500 ease-in-out ${scrolled ? "bg-[#001B1D]/95" : "bg-black/20"}`}>
       <div className="max-w-[90%] mx-auto flex items-center justify-between">
         <a href="/">
         <img src="/files/logo-w.svg" className="h-auto w-[180px]" alt="logo" />
@@ -35,9 +35,9 @@ export function Navigation() {
             Services
           </Link>
           <Link href="/contact" className="text-white text-center px-10 py-2 font-medium text-lg hover:bg-white hover:text-[#001b1d] rounded-xl transition-colors duration-500 ease-in-out">
-            Contact
+            Contact Us
           </Link>
-          <Link href="/privacy" className="text-white text-center px-10 py-2 font-medium text-lg hover:bg-white hover:text-[#001b1d] rounded-xl transition-colors duration-500 ease-in-out">
+          <Link href="/privacy-policy/" className="text-white text-center px-10 py-2 font-medium text-lg hover:bg-white hover:text-[#001b1d] rounded-xl transition-colors duration-500 ease-in-out">
             Privacy Policy
           </Link>
         </div>
@@ -62,9 +62,9 @@ export function Navigation() {
               Services
             </Link>
             <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
+              Contact Us
             </Link>
-            <Link href="/privacy" className="text-foreground hover:text-primary transition-colors">
+            <Link href="/privacy-policy" className="text-foreground hover:text-primary transition-colors">
               Privacy Policy
             </Link>
             <Link href="/" className="w-[200px] text-white bg-[#001B1D] rounded-2xl text-center px-8 py-1 font-bold text-sm group-hover:bg-white group-hover:text-[#001b1d] transition-all duration-500 ease-in-out">Customer Log-in</Link>

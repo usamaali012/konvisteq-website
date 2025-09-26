@@ -60,6 +60,20 @@ const services = [
       "Business Consulting",
     ],
   },
+  {
+    icon: Calculator,
+    title: "Financial Consultation",
+    description: "Comprehensive financial planning and consultation services",
+    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
+    features: [
+      "Financial Planning",
+      "Tax Strategy",
+      "Retirement Planning",
+      "Insurance Analysis",
+      "Estate Planning",
+      "Business Consulting",
+    ],
+  },
 ]
 
 export function ServiceDetails() {

@@ -27,8 +27,7 @@ export function ContactForm() {
   return (
     <div className="space-y-8">
       <div>
-        <p className="text-orange-500 font-medium mb-2">— get in touch</p>
-        <h2 className="font-display font-bold text-4xl md:text-5xl text-balance">
+        <h2 className="font-display font-bold text-4xl md:text-5xl text-balance mt-10">
           WE'D LOVE TO
           <br />
           HEAR FROM YOU

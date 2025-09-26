@@ -5,36 +5,44 @@ import { useState } from "react"
 
 const services = [
   {
-    title: "Construction",
-    image: "/modern-construction-site-with-cranes-and-buildings.jpg",
-    shortDescription: "Professional construction services",
-    fullDescription:
-      "From residential to commercial projects, we deliver exceptional construction services with attention to detail and quality craftsmanship. Our experienced team handles everything from foundation to finishing.",
-    features: ["Residential Construction", "Commercial Buildings", "Project Management", "Quality Assurance"],
-  },
-  {
-    title: "Architecture & Interior Design",
-    image: "/elegant-modern-interior-design-living-room-with-lu.jpg",
-    shortDescription: "Innovative architectural solutions",
-    fullDescription:
-      "Creative architectural design and building solutions that combine functionality with aesthetic appeal. We create spaces that inspire and endure.",
-    features: ["Architectural Design", "Building Planning", "3D Visualization", "Permit Assistance"],
-  },
-  {
-    title: "Business Solutions",
+    title: "B2B Solutions",
     image: "/professional-financial-advisor-meeting-with-client.jpg",
-    shortDescription: "Complete home transformations",
+    shortDescription: "Smart solutions for B2B growth",
     fullDescription:
-      "Transform your existing space with our comprehensive renovation services. From kitchen remodels to whole-house renovations, we bring your vision to life.",
-    features: ["Kitchen Remodeling", "Bathroom Renovation", "Whole House Renovation", "Historic Restoration"],
+      "Drive business growth with tailored B2B strategies that streamline operations, strengthen partnerships, and scale your enterprise efficiently.",
+    features: ["Market Strategy", "Process Automation", "Partner Expansion", "Technology Integration"],
   },
   {
-    title: "Financial Insights",
+    title: "Investment Insight",
     image: "/business-consultation-meeting-with-charts-and-fina.jpg",
-    shortDescription: "Beautiful interior spaces",
+    shortDescription: "Strategic guidance for smart investments",
     fullDescription:
-      "Transform your spaces with our creative interior design solutions that blend functionality with aesthetic appeal. Every detail is carefully considered.",
-    features: ["Space Planning", "Color Consultation", "Furniture Selection", "Lighting Design"],
+      "Make confident financial decisions with expert analysis, market insights, and personalized strategies that maximize returns and reduce risk.",
+    features: ["Portfolio Management", "Risk Assessment", "Market Analysis", "Strategic Planning"],
+  },
+  {
+    title: "E-Commerce",
+    image: "/ecomm2.jpg",
+    shortDescription: "Powerful online selling solutions",
+    fullDescription:
+      "Launch and grow your online business with secure, high-performing e-commerce platforms designed to drive sales and customer loyalty.",
+    features: ["Custom Store Development", "Secure Payments", "Inventory Management", "Responsive Design"],
+  },
+  {
+    title: "Construction",
+    image: "/herosec/buildingconst2.jpeg",
+    shortDescription: "Strong foundations, lasting results",
+    fullDescription:
+      "Delivering quality construction for residential, commercial, and industrial projects with expert planning and reliable craftsmanship.",
+    features: ["Residential Builds", "Commercial Projects", "Project Management", "Quality Assurance"],
+  },
+  {
+    title: "Interior Design",
+    image: "/elegant-modern-interior-design-living-room-with-lu.jpg",
+    shortDescription: "Elegant spaces with purpose",
+    fullDescription:
+      "Create inspiring interiors with customized designs that balance beauty, comfort, and functionality for any space.",
+    features: ["Space Planning", "Material Selection", "Furniture Curation", "Lighting Design"],
   },
 ]
 
@@ -51,7 +59,7 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        <div className="flex h-[300px] lg:h-[560px]">
+        <div className="flex h-[300px] lg:h-[600px]">
           {services.map((service, index) => (
             <div
               key={index}
