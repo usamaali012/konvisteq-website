@@ -8,7 +8,7 @@ const services = [
     icon: Handshake,
     title: "B2B Solutions",
     description: "Innovative strategies to accelerate business growth and streamline operations",
-    image: "/files/b2b.jpg",
+    image: "/iphonebanner.png",
     features: [
       "Business Process Optimization",
       "Custom E-commerce Platforms",
@@ -89,7 +89,7 @@ export function ServiceDetails() {
                 <img
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-110 object-cover rounded-2xl shadow-2xl"
                 />
               </div>
               <div className="flex-1">

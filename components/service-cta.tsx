@@ -13,7 +13,7 @@ export function ServiceCTA() {
             Let's discuss your project and explore how our expertise can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="glass text-lg px-8 py-4">
+            <Button asChild size="lg" className="glass text-lg px-8 py-4 text-black hover:text-white">
               <Link href="/contact">Contact Us Today</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="glass text-lg px-8 py-4 bg-transparent">

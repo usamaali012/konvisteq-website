@@ -1,5 +1,9 @@
 "use client"
 
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 const coreValues = [
   {
     number: "01",
@@ -63,10 +67,18 @@ const coreValues = [
 ]
 
 export function TrustSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,     // animation duration
+      easing: "ease-in-out",
+      once: true,         // animate only once
+    })
+  }, [])
+
   return (
     <section className="py-20 px-4 bg-background">
       <div className="max-w-[70%] mx-auto">
-        <div className="flex items-center justify-between mb-16">
+        <div className="flex items-center justify-between mb-16" data-aos="fade-up">
           <div className="text-primary font-medium text-lg">— why choose us.</div>
           <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">CORE VALUES</h2>
         </div>
@@ -75,6 +87,8 @@ export function TrustSection() {
           {coreValues.map((value, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}  // stagger animations
               className="group relative p-2 md:p-8 border rounded-xl cursor-pointer running-border transition-all duration-300"
             >
               {/* Animated border layer */}
@@ -92,9 +106,13 @@ export function TrustSection() {
 
               <div className="mb-6 text-muted-foreground">{value.icon}</div>
 
-              <h3 className="font-display lg:font-bold text-center md:text-left text-lg lg:text-3xl mb-4">{value.title}</h3>
+              <h3 className="font-display lg:font-bold text-center md:text-left text-lg lg:text-3xl mb-4">
+                {value.title}
+              </h3>
 
-              <p className="hidden md:block text-slate-800 leading-relaxed text-pretty">{value.description}</p>
+              <p className="hidden md:block text-slate-800 leading-relaxed text-pretty">
+                {value.description}
+              </p>
             </div>
           ))}
         </div>

@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const carouselImages = [
   {
@@ -47,6 +49,15 @@ export function HeroCarousel() {
     return () => clearInterval(timer)
   }, [])
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    })
+  }, [])
+
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Background Images */}
@@ -65,8 +76,14 @@ export function HeroCarousel() {
       {/* Overlay Content */}
       <div className="absolute inset-0 flex items-center text-left">
         <div className="text-center text-white max-w-7xl px-4">
-          <div className="bg-slate-900/0 rounded-2xl p-8 md:p-12">
-            <div className="flex flex-col text-left font-display font-semibold text-4xl md:text-6xl lg:text-6xl mb-6 leading-tight">
+          <div
+            className="bg-slate-900/0 rounded-2xl p-8 md:p-12"
+            data-aos="fade-up"        // <-- AOS animation
+          >
+            <div
+              className="flex flex-col text-left font-display font-semibold text-4xl md:text-6xl lg:text-6xl mb-6 leading-tight"
+              data-aos="fade-right"   // <-- Animate heading
+            >
               <div>Ready to take your</div>
               <div className="text-[#02adc0d8] transition-all duration-700">
                 {carouselImages[currentSlide].highlight}
@@ -75,7 +92,10 @@ export function HeroCarousel() {
             </div>
 
             {/* Button */}
-            <div className="absolute flex flex-row items-center justify-center group transition-all duration-300">
+            <div
+              className="absolute flex flex-row items-center justify-center group transition-all duration-300"
+              data-aos="zoom-in"      // <-- Animate button
+            >
               <a href="/contact/">
                 <Button className="group bg-white text-black rounded-full flex items-center justify-between text-lg gap-5 px-4 py-5.5 border shadow-sm hover:border-white hover:text-white transition-colors duration-300">
                   <span className="-ml-2 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:translate-x-3">
