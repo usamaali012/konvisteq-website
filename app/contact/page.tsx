@@ -1,25 +1,61 @@
-import { NavigationOP } from "@/components/navbar2"
-import { ContactHero } from "@/components/contact-hero"
-import { ContactForm } from "@/components/contact-form"
-import { ContactInfo } from "@/components/contact-info"
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { NavigationOP } from "@/components/navbar2";
+import { ContactHero } from "@/components/contact-hero";
+import { ContactForm } from "@/components/contact-form";
+import { ContactInfo } from "@/components/contact-info";
 
 export default function ContactPage() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,      // Animation speed (ms)
+      once: true,          // Animate only once per scroll
+      easing: "ease-in-out"
+    });
+  }, []);
+
   return (
     <main className="min-h-screen">
       <NavigationOP />
-      <ContactHero />
+     
+      {/* Hero */}
+      <div data-aos="fade-up" data-aos-delay="100">
+        <ContactHero />
+      </div>
 
-      <div className="py-14 px-4 bg-gray-50">
+      {/* Contact Form + Info */}
+      <div className="py-14 px-4 bg-gray-50" data-aos="fade-up" data-aos-delay="200">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <ContactForm />
-            <ContactInfo />
+            <div data-aos="fade-right" data-aos-delay="300">
+              <ContactForm />
+            </div>
+            <div data-aos="fade-left" data-aos-delay="400">
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-4 lg:mx-auto rounded-3xl h-[40vh] overflow-hidden mb-10 bg-[#001B1D]">
-        <iframe className="p-4 rounded-4xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d806.2808915320675!2d73.02411165171303!3d33.692724411862926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfe201537939%3A0x8862e17e7dbcd172!2sPAKLAND%20TOWER%202!5e0!3m2!1sen!2s!4v1758867069214!5m2!1sen!2s" width="100%" height="100%" loading="lazy"></iframe>
+
+      {/* Google Map */}
+      <div
+        className="max-w-7xl mx-4 lg:mx-auto rounded-3xl h-[40vh] overflow-hidden mb-10 bg-[#001B1D]"
+        data-aos="fade-left"
+        data-aos-delay="500"
+      >
+        <iframe
+          className="p-4 rounded-4xl"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d806.2808915320675!2d73.02411165171303!3d33.692724411862926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfe201537939%3A0x8862e17e7dbcd172!2sPAKLAND%20TOWER%202!5e0!3m2!1sen!2s!4v1758867069214!5m2!1sen!2s"
+          width="100%"
+          height="100%"
+          loading="lazy"
+        ></iframe>
       </div>
     </main>
-  )
+  );
 }
