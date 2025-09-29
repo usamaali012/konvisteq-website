@@ -107,7 +107,7 @@ export function ServiceDetails() {
                 <img
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
-                  className="w-full h-110 object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-full md:h-110 object-cover rounded-2xl shadow-2xl"
                 />
               </div>
 

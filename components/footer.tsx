@@ -42,7 +42,7 @@ export function Footer() {
             </div>
             <div>
               <p className="text-gray-900 text-md font-semibold">Call Us</p>
-              <p className="text-white font-semibold text-lg">051-1234567</p>
+              <p className="text-white font-semibold text-lg">051-6129688</p>
             </div>
           </div>
 
