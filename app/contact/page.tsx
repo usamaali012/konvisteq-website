@@ -1,4 +1,4 @@
-import { Navigation } from "@/components/navigation"
+import { NavigationOP } from "@/components/navbar2"
 import { ContactHero } from "@/components/contact-hero"
 import { ContactForm } from "@/components/contact-form"
 import { ContactInfo } from "@/components/contact-info"
@@ -6,7 +6,7 @@ import { ContactInfo } from "@/components/contact-info"
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      <Navigation />
+      <NavigationOP />
       <ContactHero />
 
       <div className="py-14 px-4 bg-gray-50">

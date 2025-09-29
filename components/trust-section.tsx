@@ -71,11 +71,11 @@ export function TrustSection() {
           <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">CORE VALUES</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-8">
           {coreValues.map((value, index) => (
             <div
               key={index}
-              className="group relative p-8 border border-border/20 rounded-xl cursor-pointer running-border transition-all duration-300"
+              className="group relative p-2 md:p-8 border rounded-xl cursor-pointer running-border transition-all duration-300"
             >
               {/* Animated border layer */}
               <div className="absolute inset-0 rounded-xl pointer-events-none">
@@ -92,9 +92,9 @@ export function TrustSection() {
 
               <div className="mb-6 text-muted-foreground">{value.icon}</div>
 
-              <h3 className="font-display font-bold text-3xl mb-4">{value.title}</h3>
+              <h3 className="font-display lg:font-bold text-center md:text-left text-lg lg:text-3xl mb-4">{value.title}</h3>
 
-              <p className="text-slate-800 leading-relaxed text-pretty">{value.description}</p>
+              <p className="hidden md:block text-slate-800 leading-relaxed text-pretty">{value.description}</p>
             </div>
           ))}
         </div>

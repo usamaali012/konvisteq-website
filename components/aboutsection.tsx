@@ -44,7 +44,7 @@ export function AboutSection() {
                 <img
                   src="/financialmeeting1.jpeg"
                   alt="Business consultation meeting"
-                  className="w-full h-120 object-cover opacity-90"
+                  className="w-full h-70 md:h-120 object-cover opacity-90"
                 />
               </div>
 
@@ -58,7 +58,7 @@ export function AboutSection() {
               </div>
 
               {/* Secondary Image */}
-              <div className="absolute -bottom-8 -right-8 w-48 h-32 rounded-3xl overflow-hidden border-[11px] border-white">
+              <div className="absolute -bottom-8 -right-6 md:-right-8 w-48 h-32 rounded-3xl overflow-hidden border-[11px] border-white">
                 <img
                   src="/professional-financial-advisor-meeting-with-client.jpg"
                   alt="Professional consultation"
