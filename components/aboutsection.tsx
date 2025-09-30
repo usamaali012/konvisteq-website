@@ -68,15 +68,15 @@ export function AboutSection() {
           {/* Right Side - Content */}
           <div className="space-y-8" data-aos="fade-left">
             {/* Section Header */}
-            <div className="flex items-center gap-2 text-[#3B8288]">
-              <span className="font-[Kanit] text-5xl font-extrabold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-gray-900">
+              <span className="font-[Kanit] text-5xl font-bold uppercase tracking-wider">
                 About us
               </span>
             </div>
 
             {/* Main Heading */}
             <h2
-              className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
+              className="text-4xl lg:text-5xl font-bold text-[#3B8288] leading-tight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -85,7 +85,7 @@ export function AboutSection() {
 
             {/* Description */}
             <p
-              className="text-gray-600 text-lg leading-relaxed"
+              className="text-gray-600 text-xl leading-relaxed"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -102,13 +102,13 @@ export function AboutSection() {
               data-aos-delay="600"
             >
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">
+                <div className="text-4xl lg:text-5xl font-bold text-[#3B8288] mb-2">
                   130 <span className="text-3xl">+</span>
                 </div>
                 <div className="text-gray-600 font-medium">Companies helped</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-4xl lg:text-5xl font-bold text-teal-600 mb-2">
+                <div className="text-4xl lg:text-5xl font-bold text-[#3B8288] mb-2">
                   230 <span className="text-3xl">+</span>
                 </div>
                 <div className="text-gray-600 font-medium">Revenue generated</div>

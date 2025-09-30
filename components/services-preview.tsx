@@ -4,9 +4,11 @@ import { ArrowUpRight } from "lucide-react"
 import { useState } from "react"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const services = [
   {
+    slug: "b2b-solutions",    
     title: "B2B Solutions",
     image: "/professional-financial-advisor-meeting-with-client.jpg",
     shortDescription: "Smart solutions for B2B growth",
@@ -15,14 +17,7 @@ const services = [
     features: ["Market Strategy", "Process Automation", "Partner Expansion", "Technology Integration"],
   },
   {
-    title: "Investment Insight",
-    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
-    shortDescription: "Strategic guidance for smart investments",
-    fullDescription:
-      "Make confident financial decisions with expert analysis, market insights, and personalized strategies that maximize returns and reduce risk.",
-    features: ["Portfolio Management", "Risk Assessment", "Market Analysis", "Strategic Planning"],
-  },
-  {
+    slug: "ecommerce", 
     title: "E-Commerce",
     image: "/ecomm2.jpg",
     shortDescription: "Powerful online selling solutions",
@@ -31,6 +26,16 @@ const services = [
     features: ["Custom Store Development", "Secure Payments", "Inventory Management", "Responsive Design"],
   },
   {
+    slug: "investment-advisory",
+    title: "Investment Insight",
+    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
+    shortDescription: "Strategic guidance for smart investments",
+    fullDescription:
+      "Make confident financial decisions with expert analysis, market insights, and personalized strategies that maximize returns and reduce risk.",
+    features: ["Portfolio Management", "Risk Assessment", "Market Analysis", "Strategic Planning"],
+  },
+  {
+    slug: "construction-services",
     title: "Construction",
     image: "/herosec/buildingconst2.jpeg",
     shortDescription: "Strong foundations, lasting results",
@@ -39,6 +44,7 @@ const services = [
     features: ["Residential Builds", "Commercial Projects", "Project Management", "Quality Assurance"],
   },
   {
+    slug: "interior-design",
     title: "Interior Design",
     image: "/elegant-modern-interior-design-living-room-with-lu.jpg",
     shortDescription: "Elegant spaces with purpose",
@@ -46,36 +52,32 @@ const services = [
       "Create inspiring interiors with customized designs that balance beauty, comfort, and functionality for any space.",
     features: ["Space Planning", "Material Selection", "Furniture Curation", "Lighting Design"],
   },
-]
+];
 
 export function ServicesPreview() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
     <section className="lg:flex py-20 px-4 md:px-2">
-      {/* === Desktop Layout === */}
       <div className="max-w-8xl mx-auto hidden lg:block">
-        {/* Section Heading */}
-        <div data-aos="fade-in" data-aos-anchor-placement="center-bottom" className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 text-balance">
-            Our Expertise
-          </h2>
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty">
+        <div data-aos="fade-in" className="text-center mb-16">
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Our Expertise</h2>
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto">
             Comprehensive solutions across construction, design, and financial services
           </p>
         </div>
 
-        {/* Horizontal Scroll Cards */}
         <div data-aos="fade-up" className="flex h-[300px] lg:h-[600px]">
           {services.map((service, index) => (
-            <div
+            <Link               
               key={index}
+              href={`/services#${service.slug}`}
+              scroll={true}
               className={`relative overflow-hidden cursor-pointer transition-all duration-400 ease-out ${
                 hoveredIndex === index ? "flex-[1.3]" : "flex-1"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              
             >
               {/* Background Image */}
               <div
@@ -92,30 +94,26 @@ export function ServicesPreview() {
 
               {/* Content */}
               <div className="relative h-full flex flex-col justify-end p-6 text-white group">
-                <div className="transition-all duration-500 ease-in-out">
-                  <h3 className="font-display font-bold text-2xl mb-2 group-hover:text-3xl transition-all duration-500">
-                    {service.title}
-                  </h3>
+                <h3 className="font-display font-bold text-2xl mb-2 group-hover:text-3xl transition-all duration-500">
+                  {service.title}
+                </h3>
 
-                  {/* Full Description */}
-                  <div
-                    className={`transition-all ease-in-out duration-800 overflow-hidden ${
-                      hoveredIndex === index ? "max-h-36 opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <p className="bg-black/70 rounded-2xl p-4 text-justify font-semibold text-white mb-4 text-sm">
-                      {service.fullDescription}
-                    </p>
-                  </div>
-
-                  {/* Short Description */}
-                  <div
-                    className={`${
-                      hoveredIndex === index ? "opacity-0" : "opacity-100"
-                    } transition-opacity duration-50`}
-                  >
-                    <p className="text-white/95 text-sm mb-4">{service.shortDescription}</p>
-                  </div>
+                {/* Toggle Descriptions */}
+                <div
+                  className={`transition-all ease-in-out duration-800 overflow-hidden ${
+                    hoveredIndex === index ? "max-h-36 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <p className="bg-black/70 rounded-2xl p-4 text-justify font-semibold text-white mb-4 text-sm">
+                    {service.fullDescription}
+                  </p>
+                </div>
+                <div
+                  className={`${
+                    hoveredIndex === index ? "opacity-0" : "opacity-100"
+                  } transition-opacity duration-50`}
+                >
+                  <p className="text-white/95 text-sm mb-4">{service.shortDescription}</p>
                 </div>
 
                 {/* Arrow Icon */}
@@ -129,7 +127,7 @@ export function ServicesPreview() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

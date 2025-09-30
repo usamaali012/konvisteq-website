@@ -8,6 +8,24 @@ import "aos/dist/aos.css";
 
 const carouselImages = [
   {
+    src: "/herosec/presentation.jpg",
+    alt: "Financial Advisory Services",
+    title: "Investment Advisory",
+    highlight: "Financial Insights",
+  },
+  {
+    src: "/ecomm.jpg",
+    alt: "E-commerce Solutions",
+    title: "E-commerce",
+    highlight: "Enterprise Commerce Solutions",
+  },
+  {
+    src: "/business-consultation-meeting-with-charts-and-fina.jpg",
+    alt: "Financial Consultation",
+    title: "Financial Consultation",
+    highlight: "Strategic Financial Planning",
+  },
+  {
     src: "/herosec/buildingconst.jpg",
     alt: "Construction Services",
     title: "Expert Construction",
@@ -18,24 +36,6 @@ const carouselImages = [
     alt: "Interior Design Services",
     title: "Interior Design",
     highlight: "Design & Philosophy",
-  },
-  {
-    src: "/herosec/presentation.jpg",
-    alt: "Financial Advisory Services",
-    title: "Investment Advisory",
-    highlight: "Financial Insights",
-  },
-  {
-    src: "/business-consultation-meeting-with-charts-and-fina.jpg",
-    alt: "Financial Consultation",
-    title: "Financial Consultation",
-    highlight: "Strategic Financial Planning",
-  },
-  {
-    src: "/ecomm.jpg",
-    alt: "E-commerce Solutions",
-    title: "E-commerce",
-    highlight: "Enterprise Commerce Solutions",
   },
 ]
 
