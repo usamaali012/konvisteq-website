@@ -92,30 +92,38 @@ Significant updates will be posted on our website and, where appropriate, notifi
     content: `If you have any questions or concerns regarding this Privacy Policy, please contact:
 
 Email: info@konvisteq.com  
-Phone: +92 (51) 123-4567  
+Phone: +92 (51) 6129688  
 
 Office Address:  
 Office No.808, 8th Floor, Pakland Tower-2, New Blue Area (F-9/G-9), Islamabad, Pakistan`,
   },
 ]
 export function PrivacyContent() {
-  const [expandedSections, setExpandedSections] = useState<number[]>([])
+  // Initialize with all indices to have all sections open by default
+  const [expandedSections, setExpandedSections] = useState<number[]>(
+    privacySections.map((_, index) => index)
+  )
 
   const toggleSection = (index: number) => {
-    setExpandedSections((prev) => (prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]))
+    setExpandedSections((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index) 
+        : [...prev, index]               
+    )
   }
 
   return (
     <section className="py-16 px-4 bg-gray-50 min-h-screen">
       <div className="max-w-4xl mx-auto">
-        
-        {/* Accordion Sections */}
         <div className="space-y-2">
           {privacySections.map((section, index) => {
             const isExpanded = expandedSections.includes(index)
 
             return (
-              <div key={index} className="border-2 border-gray-400 bg-white rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="border-2 border-gray-400 bg-white rounded-lg overflow-hidden"
+              >
                 <button
                   onClick={() => toggleSection(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-inset"
@@ -124,16 +132,18 @@ export function PrivacyContent() {
                     {index + 1}. {section.title}
                   </span>
                   {isExpanded ? (
-                    <ChevronUp className="w-5 h-5 text-gray-500" />
-                  ) : (
                     <ChevronDown className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
                   )}
                 </button>
 
                 {isExpanded && (
                   <div className="px-6 pb-6 border-t border-gray-100">
                     <div className="pt-4">
-                      <div className="text-gray-700 leading-relaxed whitespace-pre-line">{section.content}</div>
+                      <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                        {section.content}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -142,7 +152,6 @@ export function PrivacyContent() {
           })}
         </div>
 
-        {/* Footer */}
         <div className="mt-12 text-center text-sm text-gray-500">
           <p>Last updated: 26-09-2025</p>
         </div>

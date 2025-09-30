@@ -19,7 +19,7 @@ export function ContactInfo() {
 
         <div className="space-y-3">
           <p className="text-gray-800text-2xl font-bold">Office# 808, 8th floor, Pakland Tower-2, New Blue Area (F-9/G-9) Islamabad</p>
-          <p className="text-[#02adc0d8] font-bold text-xl">(050) 123 - 456 78</p>
+          <p className="text-[#02adc0d8] font-bold text-xl">(051) 6129688 </p>
           <p className="text-gray-600 text-xl text-semibold">info@konvisteq.com</p>
         </div>
       </div>

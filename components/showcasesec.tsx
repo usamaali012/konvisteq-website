@@ -72,7 +72,7 @@ export function ShowcaseSection() {
               <div className="absolute top-6 right-6 space-y-4">
                 {/* Completed Projects Card */}
                 <div
-                  className="bg-black text-white p-6 rounded-xl shadow-lg"
+                  className="bg-[#3B8288] text-white p-6 rounded-xl shadow-lg"
                   data-aos="fade-down"
                   data-aos-delay="500"
                 >
@@ -91,7 +91,7 @@ export function ShowcaseSection() {
 
                 {/* Awards Card */}
                 <div
-                  className="bg-[#001B1D] text-white p-6 rounded-xl shadow-lg"
+                  className="bg-[#23737A]/90 text-white p-6 rounded-xl shadow-lg"
                   data-aos="fade-down"
                   data-aos-delay="700"
                 >

@@ -39,7 +39,7 @@ export function AboutSection() {
 
               {/* Experience Badge */}
               <div
-                className="absolute -top-6 -left-6 bg-teal-500 text-white p-6 rounded-2xl z-10 duration-300 border-8 border-gray-50"
+                className="absolute -top-6 -left-6 bg-[#3B8288] text-white p-6 rounded-2xl z-10 duration-300 border-8 border-gray-50"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               >
@@ -68,7 +68,7 @@ export function AboutSection() {
           {/* Right Side - Content */}
           <div className="space-y-8" data-aos="fade-left">
             {/* Section Header */}
-            <div className="flex items-center gap-2 text-teal-600">
+            <div className="flex items-center gap-2 text-[#3B8288]">
               <span className="font-[Kanit] text-5xl font-extrabold uppercase tracking-wider">
                 About us
               </span>

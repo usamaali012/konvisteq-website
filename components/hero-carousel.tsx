@@ -85,7 +85,7 @@ export function HeroCarousel() {
               data-aos="fade-right"   // <-- Animate heading
             >
               <div>Ready to take your</div>
-              <div className="text-[#02adc0d8] transition-all duration-700">
+              <div className="text-[#31a1ac] transition-all duration-700">
                 {carouselImages[currentSlide].highlight}
               </div>
               <div>to the next level?</div>

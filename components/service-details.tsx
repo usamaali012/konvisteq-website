@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Link from "next/link";
 import { Building, Palette, TrendingUp, Calculator, CheckCircle, Handshake } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -80,7 +80,7 @@ const services = [
 ];
 
 export function ServiceDetails() {
-  // ✅ Initialize AOS on mount
+  // Initialize AOS on mount
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation speed (ms)
@@ -94,16 +94,21 @@ export function ServiceDetails() {
       <div className="max-w-7xl mx-auto">
         <div className="space-y-20">
           {services.map((service, index) => (
-            <div
+            <Link
               key={index}
-              className={`flex flex-col ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
-              } gap-12 items-center`}
+              href="/services"                        // ✅ destination
+              className={`group flex flex-col cursor-pointer 
+                ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} 
+                gap-12 items-center`}
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={index * 100}
+              data-aos-delay={index * 50}
             >
               {/* Image */}
-              <div className="flex-1" data-aos="zoom-in" data-aos-delay={index * 150 + 100}>
+              <div
+                className="flex-1 transition-transform duration-300 group-hover:scale-[1.02]"
+                data-aos="zoom-in"
+                data-aos-delay={index * 150 + 100}
+              >
                 <img
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
@@ -112,8 +117,12 @@ export function ServiceDetails() {
               </div>
 
               {/* Details */}
-              <div className="flex-1" data-aos="fade-up" data-aos-delay={index * 200 + 150}>
-                <Card className="glass border-0 p-8">
+              <div
+                className="flex-1"
+                data-aos="fade-up"
+                data-aos-delay={index * 200 + 150}
+              >
+                <Card className="glass border-0 p-8 transition-shadow group-hover:shadow-xl">
                   <CardContent className="p-0">
                     <div className="glass rounded-full w-16 h-16 flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-primary" />
@@ -141,7 +150,7 @@ export function ServiceDetails() {
                   </CardContent>
                 </Card>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
