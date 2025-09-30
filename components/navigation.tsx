@@ -73,19 +73,19 @@ export function Navigation() {
               </Link>
 
               <Link
-                href="/contact"
-                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                Contact Us
-              </Link>
-
-              <Link
                 href="/privacy-policy"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
               >
                 <Shield className="w-5 h-5" />
                 Privacy Policy
+              </Link>
+
+              <Link
+                href="/contact"
+                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                Contact Us
               </Link>
 
               {/* Centered Login Button */}
