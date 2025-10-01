@@ -17,7 +17,7 @@ const services = [
     features: ["Market Strategy", "Process Automation", "Partner Expansion", "Technology Integration"],
   },
   {
-    slug: "ecommerce", 
+    slug: "e-commerce", 
     title: "E-Commerce",
     image: "/ecomm2.jpg",
     shortDescription: "Powerful online selling solutions",

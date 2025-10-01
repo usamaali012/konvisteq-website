@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
-import { Building, Palette, TrendingUp, Calculator, CheckCircle, Handshake } from "lucide-react";
+import { Building, Palette, TrendingUp, Calculator, CheckCircle, Handshake, ShoppingCart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -23,24 +23,24 @@ const services = [
     ],
   },
   { 
-    slug:"financial-solution",
-    icon: Calculator,
-    title: "Financial Consultation",
-    description: "Comprehensive financial planning and consultation services",
-    image: "/business-consultation-meeting-with-charts-and-fina.jpg",
+    slug: "e-commerce",
+    icon: ShoppingCart,
+    title: "E-commerce Solutions",
+    description: "End-to-end online store development and growth solutions.",
+    image: "/ecomm.jpg",
     features: [
-      "Financial Planning",
-      "Tax Strategy",
-      "Retirement Planning",
-      "Insurance Analysis",
-      "Estate Planning",
-      "Business Consulting",
+      "Custom Online Stores",
+      "Secure Payment Integration",
+      "Product & Inventory Management",
+      "Mobile-Optimized Design",
+      "SEO & Digital Marketing",
+      "Analytics & Reporting",
     ],
   },
   {
     slug:"investment-advisory",
     icon: TrendingUp,
-    title: "Investment Advisory",
+    title: "Financial and Investment Advisory",
     description: "Strategic investment guidance for wealth building and preservation",
     image: "/financialmeeting2.jpg",
     features: [
